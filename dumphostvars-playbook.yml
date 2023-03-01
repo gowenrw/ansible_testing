@@ -1,0 +1,9 @@
+---
+- name: Dump hostvars play
+  hosts: all
+  tasks:
+    - name: Gather facts
+      ansible.builtin.setup:
+    - name: Dump host facts values
+      ansible.builtin.debug:
+        var: hostvars
